@@ -5,14 +5,14 @@ st.write("Hello, Streamlit!")
 import pickle
 import numpy as np
 
-# Load model
+
 with open("breast_cancer_model.pkl", "rb") as file:
  
     model = pickle.load(file)
 
 st.title("Breast Cancer Detection")
 
-# User inputs
+
 features = [st.number_input(f"Feature {i}") for i in range(1, 31)]
 
 
